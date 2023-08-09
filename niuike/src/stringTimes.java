@@ -8,9 +8,9 @@ public class stringTimes {
         int times = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入字符串：");
-        String str = scanner.nextLine();
+        String str = scanner.nextLine().toLowerCase();
         System.out.println("请输入字符：");
-        char cha = scanner.next().charAt(0);
+        char cha = scanner.next().toLowerCase().charAt(0);
         String[] arr = str.split("");
         for (int i = 0;i < arr.length; i++){
             if(arr[i].charAt(0) == cha){
