@@ -25,7 +25,6 @@ public class coordinateRemove {
         int x = 0;
         int y = 0;
         // 提示用户操作
-        System.out.println("请输入操作（用英文;分开）：");
         // 获取用户输入操作
         String[] coordinate = scanner.nextLine().split(";");
         int len = coordinate.length;
@@ -33,7 +32,7 @@ public class coordinateRemove {
         ArrayList<Integer> xlist = new ArrayList<>();
         ArrayList<Integer> ylist = new ArrayList<>();
         for (int i = 0; i < len; i++){
-            // System.out.println(coordinate[i] + "====" + coordinate[i].length());
+
             try{
                 int cleng = coordinate[i].length();
                 int num = Integer.parseInt(coordinate[i].substring(1,cleng));
@@ -52,20 +51,17 @@ public class coordinateRemove {
                         ylist.add(num);
                         break;
                     default:
-                        System.out.println("输入的操作符"+coordinate[i]+"不合法");
+
                 }
             }catch (Exception e){
-                System.out.println(e + "操作有误");
             }
         }
-
         for (int o : xlist) {
             x += o;
         }
         for (int i: ylist){
             y += i;
         }
-
-        System.out.println("(x,y):" + "(" + x + "," + y + ")");
+        System.out.println(x + "," + y);
     }
 }

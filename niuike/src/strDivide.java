@@ -11,7 +11,6 @@ public class strDivide {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         StringBuilder sb = new StringBuilder(); // 构建字符缓冲区
-        System.out.println("请输入字符串：");
         String str = scanner.nextLine();
         sb.append(str);
         int strlen = str.length();
@@ -25,6 +24,8 @@ public class strDivide {
         for (int i = 0; i < len; i++){
             strarr[i] = str1.substring(i * 8, (i + 1) * 8);
         }
-        System.out.println(Arrays.toString(strarr));
+        for (int i = 0; i < strarr.length; i++){
+            System.out.println(strarr[i] + " ");
+        }
     }
 }
